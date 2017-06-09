@@ -1,8 +1,9 @@
 class Game < ActiveRecord::Base
-  MONTH_NAMES = ["January","February","March","April","May","June","July","August",
-  "September","October","November","December"]
-  Day_Number=["1","2","3","4","5","6","7","8","9","10",
-              "11","12","13","14","15","16","17","18","19","20",
-              "21","22","23","24","25","26","27","28","29","30","31"]
 
+  belongs_to :user
+  validates_presence_of :my_score,:opponent_score,:opponent
+  validates_numericality_of :my_score,:opponent_score
+  validates :my_score,  numericality: { less_than: 22, greater_than_or_equal_to: 0 ,:message => "Please enter number between 0 and 21"}
+  validates :opponent_score,  numericality: { less_than: 22, greater_than_or_equal_to: 0 ,:message => "Please enter number between 0 and 21"}
 end
+

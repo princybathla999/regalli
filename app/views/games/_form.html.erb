@@ -18,18 +18,19 @@
   </div>
   <div class="field">
     <%= f.label :opponent %><br>
-    <%= f.select :opponent,options_for_select(@other_user.collect{|x| [x.email,x.id]}) %>
+    <%= f.select :opponent,options_for_select(@opponents.all.collect{|x| [x.email,x.id]}) %>
 
   </div>
   <div class="field">
     <%= f.label :my_score %><br>
-    <%= f.text_field :my_score %>
+    <%= f.text_field :my_score ,:id=>"my_score"%>
   </div>
   <div class="field">
     <%= f.label :opponent_score %><br>
-    <%= f.text_field :opponent_score %>
+    <%= f.text_field :opponent_score ,:id=>"opponent_score" %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

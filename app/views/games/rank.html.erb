@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Games</h1>
+
+<table border="5px" bold >
+  <thead>
+    <tr>
+
+      <th>Rank</th>
+      <th>Email</th>
+      <th>Score</th>
+      <th>Result</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+<%counter=0%>
+        <% @user_score.each do|user|%>
+      <tr>
+        <td><%=counter + 1%></td>
+        <td><%= user.keys %></td>
+        <td><%= user.values %></td>
+      <td><%=  %></td>
+        <%counter=counter+1%>
+      </tr>
+          <%end%>
+
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game', new_game_path %>
