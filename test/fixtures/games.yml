@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  month: MyString
+  date: MyString
+  year: MyString
+  opponent: 1
+  mu_score: 
+  opponent_score: 
+
+two:
+  month: MyString
+  date: MyString
+  year: MyString
+  opponent: 1
+  mu_score: 
+  opponent_score: 
